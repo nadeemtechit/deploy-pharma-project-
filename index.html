@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome</title>
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Basic styles -->
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.5;
+    }
+    .container {
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, #0ea5e9 0%, #22c55e 100%);
+    }
+    .card {
+      max-width: 680px;
+      width: 100%;
+      background: color-mix(in oklab, white 92%, transparent);
+      backdrop-filter: blur(6px);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    }
+    h1 {
+      margin: 0 0 .5rem;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+    }
+    p {
+      margin: 0 0 1rem;
+      color: #333;
+    }
+    .actions {
+      display: flex;
+      gap: .75rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: .6rem 1rem;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      background: #0f766e;
+      transition: transform .1s ease, box-shadow .1s ease;
+    }
+    .btn.secondary { background: #1d4ed8; }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,0,0,.2); }
+    footer {
+      margin-top: 1.25rem;
+      font-size: .9rem;
+      color: #555;
+    }
+    @media (prefers-color-scheme: dark) {
+      p, footer { color: #ddd; }
+    }
+  </style>
+
+  <!-- Social sharing (optional) -->
+  <meta property="og:title" content="Welcome" />
+  <meta property="og:description" content="Fast, clean starter page." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <main class="container">
+    <section class="card" role="region" aria-label="Intro">
+      <h1>It works!</h1>
+      <p>Your web server is up. Customize this page and deploy confidently.</p>
+      <div class="actions">
+        <a class="btn" href="#" aria-label="Primary action">Get started</a>
+        <a class="btn secondary" href="#" aria-label="Secondary action">Docs</a>
+      </div>
+      <footer>
+        Deployed on Nginx • Built with plain HTML/CSS
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
